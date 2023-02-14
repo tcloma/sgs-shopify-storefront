@@ -1,20 +1,21 @@
+import Link from 'next/link';
 import React from 'react';
 
 type Props = {};
 
 export default function NavBar({}: Props) {
 	return (
-		<div className='navbar absolute top-2 right-[50%] w-1/2 translate-x-[50%] rounded-md bg-base-100'>
+		<div className='navbar absolute top-2 right-[50%] w-2/3 translate-x-[50%] rounded-md bg-base-100'>
 			<div className='flex-1 divide-x-2 divide-base-300'>
 				<div className='pr-2'>
 					<a className='btn-ghost btn text-xl normal-case'>🪷</a>
 				</div>
 				<ul className='menu menu-horizontal pl-2'>
 					<li className='hover:bg-base-neutral rounded-md'>
-						<a>Home</a>
+						<Link href={'/'}>Home</Link>
 					</li>
 					<li className='rounded-md'>
-						<a>Collections</a>
+						<Link href={'/collections'}>Collections</Link>
 					</li>
 					<li className='rounded-md'>
 						<a>Blog</a>
