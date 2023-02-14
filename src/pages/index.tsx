@@ -10,11 +10,11 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className='hero min-h-screen bg-base-200'>
-				<div className='hero-content text-center'>
-						<h1 className='text-5xl font-bold'>Hello there</h1>
-						<p className='py-6'>
-							High Vibe Crystals for the Modern Goddess
-						</p>
+				<div className='hero-content flex-col text-center'>
+					<h1 className='text-9xl font-bold'>Sacred Goddess Studio</h1>
+					<p className='py-6 text-3xl text-neutral'>
+						High Vibe Crystals for the Modern Goddess
+					</p>
 				</div>
 			</div>
 		</>
