@@ -4,6 +4,9 @@ export interface Collection {
 	id: string;
 	title: string;
 	products: Product[];
+    image: {
+        src: string
+    }
 }
 
 export interface Product {
