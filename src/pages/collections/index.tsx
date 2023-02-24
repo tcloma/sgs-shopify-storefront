@@ -1,5 +1,6 @@
 import { Collection } from '@/types/shopifyTypes';
 import { storeFront } from '@/utils/shopifyClient';
+import { getAllCollectionIds, getAllCollections } from '@/utils/shopifyHelpers';
 import Image from 'next/image';
 
 type Props = {
@@ -7,10 +8,9 @@ type Props = {
 };
 
 export async function getStaticProps() {
-	const res = await storeFront.collection.fetchAll();
 	return {
 		props: {
-			collections: JSON.parse(JSON.stringify(res)),
+			collections: await getAllCollections(),
 		},
 	};
 }
@@ -26,7 +26,13 @@ export default function Collections({ collections }: Props) {
 					return (
 						<div>
 							<h2>{col.title}</h2>
-							<Image className='aspect-square' alt='Collection prewview' src={col.image.src} width={400} height={400} />
+							<Image
+								className='aspect-square'
+								alt='Collection prewview'
+								src={col.image.src}
+								width={400}
+								height={400}
+							/>
 						</div>
 					);
 			})}

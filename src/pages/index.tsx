@@ -22,7 +22,7 @@ export default function Home() {
 					</p>
 				</div>
 			</section>
-			<section>{/* New Arrivals */}</section>
+			<section>New Arrivals</section>
 			{/* Instagram Feed */}
 			{/* The Goddess behind the Studio */}
 			{/* Free shipping indicator at top that tracks cart value */}
